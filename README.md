@@ -1,2 +1,3 @@
-# SCU-H4H-2023
-lit
+# SCU Dining Points Exchange
+
+Let's go, Broncos.
