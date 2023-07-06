@@ -1,0 +1,104 @@
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+/* h1 formatting */
+h1 {
+  text-align: center;
+  color: #800000;
+}
+
+/* table formatting */
+table {
+  margin: 0 auto;
+  font-size: large;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+  font-weight: lighter;
+}
+
+th {
+  background-color: #800000;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* button style*/
+button {
+  font-family: inherit;
+  font-size: 100%;
+  background-color: #04aa6d;
+  box-sizing: border-box;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+form {
+  border: 15px solid #f1f1f1;
+  background-color: #f1f1f1;
+}
+
+label {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* style for table header */
+.tableHeader {
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 105%;
+  vertical-align: text-top;
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 16px;
+  align-items: center;
+}
+
+/* format for textbox*/
+.textbox {
+  color: #000000;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
