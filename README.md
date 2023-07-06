@@ -1,3 +1,7 @@
-# SCU Dining Points Exchange
+# PointSwap
 
-Let's go, Broncos.
+SCU Dining Points Exchange site
+
+## About
+
+This is to be edited.

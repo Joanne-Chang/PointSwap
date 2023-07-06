@@ -1,0 +1,64 @@
+<head>
+  <title>Request accepted!</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/pages/request.css" />
+  <link href="https://fonts.googleapis.com/css?family=Simonetta:200,300,400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700" rel="stylesheet">
+  <link rel="icon" href="https://cdn.glitch.global/044506bb-74de-4296-a49f-2556041e44b7/app%20icon%201.png?v=1676784568994">
+</head>
+
+<body>
+  <h1>Request accepted!</h1>
+  <main>
+    <div class="container">
+      <form action="/action_page.php">
+        <table id="table">
+          <tr>
+            <th>User</th>
+            <th>Location</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Time</th>
+          </tr>
+          <script>
+            $(document).ready(function () {
+              // FETCHING DATA FROM JSON FILE
+              $.getJSON("/pages/table.json", function (data) {
+                var order = "";
+
+                $.each(data, function (key, value) {
+                  order += "<tr>";
+                  order += "<td><input type=\"checkbox\"></td>";
+                  order += "<td>" + value.user + "</td>";
+                  order += "<td>" + value.loc + "</td>";
+                  order += "<td>" + value.item + "</td>";
+                  order += "<td>" + value.cost + "</td>";
+                  order += "<td>" + value.time + "</td>";
+                  order += "</tr>";
+                });
+
+                //INSERTING ROWS INTO TABLE
+                $("#table").append(order);
+              });
+            });
+          </script>
+        </table>
+      </form>
+    </div>
+  
+  <main>
+    <div class="center" style="height:100px">
+      <button id="DashboardButton" class="optionButtons" onclick="window.location.href = '/pages/dashboard.html';">Back to Dashboard</button>
+    </div>
+    <div class="center" style="height:100px">
+      <button id="CancelRequestButton" class="optionButtons" style="background-color:#f44336" >Cancel request</button>
+    </div>
+  </main>
+  <script src="data.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js" integrity="sha512-n7swEtVCvXpQ7KxgpPyp0+DQQEf5vPpmzCRl14x2sp2v5LpCYCjrAx03mkBAbWwGF9eUoIk8YVcDFuJRIeYttg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+

@@ -1,0 +1,55 @@
+<head>
+  <title>Make a request!</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/pages/request.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Simonetta:200,300,400,600,700"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700"
+    rel="stylesheet"/>
+  <link rel="icon" href="https://cdn.glitch.global/044506bb-74de-4296-a49f-2556041e44b7/app%20icon%201.png?v=1676784568994">
+
+  <script src="/makerequest.js" defer></script>
+</head>
+
+<body>
+  <h1>Make a Request!</h1>
+
+  <main>
+    <form>
+      <div class="container">
+        <div style="height: 50px">
+          <label for="locs">Where would you like to order from?</label>
+          <select name="locs" id="locs">
+            <option value="Benson">Benson</option>
+            <option value="Fresh Bytes SCDI">Fresh Bytes (SCDI)</option>
+            <option value="Side Bar Charney">Side Bar (Charney Hall)</option>
+            <option value="Sunstream Library">Sunstream (Library)</option>
+            <option value="Cadence Lucas">Cadence (Lucas Hall)</option>
+          </select>
+        </div>
+        <div>
+          <label for="order">What would you like to order?</label>
+          <input type="text" class="textbox" id="order" name="order" required />
+        </div>
+        <button type="submit" id="submit"  onclick="window.location.href = '/pages/confirmrequest.html';">Request</button>
+      </div>
+    </form>
+    
+    <div class="center">
+      <button
+        type="button"
+        class="cancelbtn"
+        onclick="window.location.href = '/pages/dashboard.html';"
+      >
+        Cancel
+      </button>
+    </div>
+  </main>
+  
+</body>

@@ -1,0 +1,74 @@
+<head>
+  <title>Fulfill a request</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="/pages/request.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Simonetta:200,300,400,600,700"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700"
+    rel="stylesheet"
+  />
+  <link rel="icon" href="https://cdn.glitch.global/044506bb-74de-4296-a49f-2556041e44b7/app%20icon%201.png?v=1676784568994">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="dist/jquery.simple-checkbox-table.js"></script>
+</head>
+
+<body>
+  <h1>Fulfill a request!</h1>
+
+  <main>
+    <div class="container">
+      
+        <div class="tableHeader">Available Requests</div>
+        <table id="table">
+          <tr>
+            <th>Accept</th>
+            <th>User</th>
+            <th>Location</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Time</th>
+          </tr>
+          <script>
+            $(document).ready(function () {
+              // FETCHING DATA FROM JSON FILE
+              $.getJSON("/pages/table.json", function (data) {
+                var order = "";
+
+                $.each(data, function (key, value) {
+                  order += "<tr>";
+                  order += "<td><input type=\"checkbox\"></td>";
+                  order += "<td>" + value.user + "</td>";
+                  order += "<td>" + value.loc + "</td>";
+                  order += "<td>" + value.item + "</td>";
+                  order += "<td>" + value.cost + "</td>";
+                  order += "<td>" + value.time + "</td>";
+                  order += "</tr>";
+                });
+
+                //INSERTING ROWS INTO TABLE
+                $("#table").append(order);
+              });
+            });
+          </script>
+        </table>
+        <button type="submit" id="submit"  onclick="window.location.href = '/pages/confirmfulfill.html';">Accept Request(s)</button>
+
+      
+      <div class="center">
+        <button
+          type="button"
+          class="cancelbtn"
+          onclick="window.location.href = '/pages/dashboard.html';"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
