@@ -3,48 +3,26 @@
   <head>
     <link rel="stylesheet" href="/pages/welcome.css" />
     <meta charset="UTF-8" />
-    <title>Welcome!</title>
+    <title>SCU Dining Points Exchange</title>
     <link rel="icon" href="https://cdn.glitch.global/044506bb-74de-4296-a49f-2556041e44b7/app%20icon%201%20cropped.png?v=1676784768704">
   </head>
+  
   <body>
-    <h1>Welcome to SCU Dining Pts Exchange!</h1>
+    
     <div>
-      <form action="action_page.php" method="post">
-        <!--            <div class="imgcontainer">-->
-        <!--                <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
-        <!--            </div>-->
+      <a href="https://pointswap.glitch.me/pages/aboutus.html">
+      <img id="Logo" src="https://cdn.glitch.global/40a92300-6787-4692-8c86-1a201796556b/homepage%20transparent.png?v=1688694354591" alt="SCU Dining Pts Logo">
+      </a>
+        
+      <a id="RequestLink" href="/pages/makerequest.html">
+      <button name="submit" class="action_btn btn-gradient-1" type="submit" id="RequestBtn" value="MakeRequest" onclick="myFunction()">Make a request</button>
+      </a>
 
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input
-            type="text"
-            placeholder="Enter Username"
-            name="uname"
-            id="uname"
-            required
-          />
-
-          <label for="psw"><b>Password</b></label>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            name="psw"
-            id="psw"
-            required
-          />
-
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember" /> Remember
-            me
-          </label>
-        </div>
-
-        <div class="container" style="background-color: #f1f1f1">
-        <button type="button" class="exitbtn" onclick="window.location.href = '/pages/new_user.html';">Sign Up</button>
-          <!--                <span class="psw">Forgot <a href="#">password?</a></span>-->
-        </div>
-      </form>
+      <a id="FulfillLink" href="/pages/fulfillrequest.html">
+      <button name="submit" class="action_btn btn-gradient-2" type="submit" id="FulfillBtn" value="FulfillRequest" onclick="myFunction2()">Fulfill a request</button>
+      </a>
+        
     </div>
+
   </body>
 </html>

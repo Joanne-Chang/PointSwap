@@ -1,0 +1,21 @@
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 200%;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#FoodItem {
+  color: red;
+}
+
+#Location {
+  color: orange;
+}
+
+#Fulfiller {
+  color: blue;
+}
