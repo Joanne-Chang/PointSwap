@@ -32,7 +32,7 @@ With our website, both issues can now be solved!
       C -- Submit form --> E;
       E --> F(Dashboard);
       F --> G[\"Request completed\" page];
-      F --> H<Loop>;
+      F --> H{Loop};
 ```
 
 ### To Do
