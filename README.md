@@ -31,9 +31,8 @@ With our website, both issues can now be solved!
       B -- Submit form --> E[Confirmation page];
       C -- Submit form --> E;
       E --> F(Dashboard);
-      F --> G{"Request completed" page};
-      F --> B;
-      F --> C;
+      F --> G[\"Request completed\" page];
+      F --> H<Loop>;
 ```
 
 ### To Do
