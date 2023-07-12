@@ -21,17 +21,17 @@ With our website, both issues can now be solved!
 [IMG2: "Make a request" Flow Diagram]<br>
 [IMG2: "Fulfill a request" Flow Diagram]
 
-## Code Structure
+## Site Structure
 
 ```mermaid
   graph TD;
       A((Splash page)) --> D[About Us];
-      A -- Make a request --> B["Make a request" form page]; 
-      A -- Fulfill a request --> C["Fulfill a request" form page]; 
+      A -- Make a request --> B[*Make a request* form page]; 
+      A -- Fulfill a request --> C[*Fulfill a request* form page]; 
       B -- Submit form --> E[Confirmation page];
       C -- Submit form --> E;
       E --> F(Dashboard);
-      F --> G["Request completed" page];
+      F --> G[*Request completed* page];
       F --> H{Loop};
 ```
 
